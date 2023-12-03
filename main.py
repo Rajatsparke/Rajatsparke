@@ -1,6 +1,5 @@
 import streamlit as st
 import numpy as np
-import matplotlib.pyplot as plt
 import pandas as pd
 
 # Title
@@ -58,4 +57,5 @@ elif 18<a<24:
     st.write("You got placed via MBA and your monthly salary is",mba_salary/12)
     st.write("You total earnings till now via an MBA are",(mba_salary/12)*(a%18))
     roi_mba = round((((mba_salary/12)*(a%18))/mba_fee)*100)
+    st.write("Your ROI in MBA is",roi_mba,"% vs",roi_basl,"% in BASL")
 
