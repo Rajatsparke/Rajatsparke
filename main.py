@@ -11,7 +11,7 @@ mba_fee = st.number_input('Traditional MBA Fee in Rupees', value = 1000000)
 
 # Input
 basl_salary = st.number_input('BASL minimum salary after placement (6 months)', value=900000)
-# commit by Varun2
+# commit by Varun
 mba_salary = st.number_input("MBA Salary after placement (2 years)", value = 1500000)
 
 annual_growth = st.number_input("Annual growth in %age",value = 15)
