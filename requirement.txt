@@ -2,3 +2,5 @@ gspread
 pandas
 numpy
 streamlit
+packages.txt
+gspread
