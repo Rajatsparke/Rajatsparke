@@ -14,7 +14,7 @@ df = conn.read()
 
 # Title
 #st.title('Calculate your ROI \n **Kraftshala\'s Business and Sales Launchpad (BASL) or Traditional MBA**')
-#st.set_page_config(page_title='Calculate your ROI ',page_icon="bar_chart")
+
 st.title('Calculate your ROI \n **Kraftshala\'s Business and Sales Launchpad (BASL) or Traditional MBA**')
 
 basl_investment = st.number_input('How much BASL costs:', value = 175000)
