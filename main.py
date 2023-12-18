@@ -32,9 +32,9 @@ if len(corresponding_value) > 0:
 else:
      st.warning("No corresponding value found.")
 
-salary = df.loc[df['Institute'] == selected_option, 'Average Salary'].values
-if len(salary) > 0:
-     st.success(f"Average Salary for {selected_option} is : Rs {salary[0]}")
+mba_salary = df.loc[df['Institute'] == selected_option, 'Average Salary'].values
+if len(mba_salary) > 0:
+     st.success(f"Average Salary for {selected_option} is : Rs {mba_salary[0]}")
 else:
      st.warning("No corresponding value found.")
 
@@ -42,7 +42,7 @@ else:
 
 
 basl_salary = st.number_input('The minimum salary you get placed at if you opt for BASL (in 6 months)', value=900000)
-mba_salary = st.number_input("The average salary you get placed at if you opt for traditional MBA (in 24 months)", value = 1500000)
+#mba_salary = st.number_input("The average salary you get placed at if you opt for traditional MBA (in 24 months)", value = 1500000)
 
 annual_growth = st.number_input("Annual growth in %age",value = 15)
 
