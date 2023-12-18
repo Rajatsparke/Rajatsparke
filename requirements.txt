@@ -2,3 +2,4 @@ gspread
 pandas
 numpy
 streamlit
+st-gsheets-connection

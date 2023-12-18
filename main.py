@@ -2,7 +2,15 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import gspread
-cred_file = "key.json"
+from streamlit_gsheets import GSheetsConnection
+
+
+# Create a connection object.
+conn = st.connection("gsheets", type=GSheetsConnection)
+
+df = conn.read()
+
+'''cred_file = "key.json"
 gc = gspread.service_account(cred_file)
 
 sh = gc.open("ROI Calculator - Institutes")
@@ -11,7 +19,7 @@ institutes = wks.col_values(1)
 fee = wks.col_values(2)
 url = f"https://docs.google.com/spreadsheets/d/1WxFPOD3SNEwPoiqBOyUG_5wG41QVwpfU3pdjjEgonq0/gviz/tq?tqx=out:csv&sheet=Sheet1"
 df = pd.read_csv(url)
-#st.write(df)
+#st.write(df)'''
 
 
 
