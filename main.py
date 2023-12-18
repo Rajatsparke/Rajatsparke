@@ -1,3 +1,4 @@
+st.set_page_config(page_title='Calculate your ROI ',page_icon="bar_chart")
 import streamlit as st
 import numpy as np
 import pandas as pd
