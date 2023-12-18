@@ -87,7 +87,7 @@ elif 18<a<24:
     st.write("Your total earnings after",a ,'months via BASL is',round(c+(d*(a%12))))
     e = (c+(d*(a%12)))
     roi_basl = (round(((c+(d*(a%12)))/basl_investment)*100))
-    st.write("You got placed via MBA and your monthly salary is", mba_salary/12)
+    st.write("You got placed via MBA and your monthly salary is", round(mba_salary/12))
     st.write("You total earnings till now via an MBA are",round((mba_salary/12)*(a%18)))
     roi_mba = ((((mba_salary/12)*(a%18))/corresponding_value)*100)
     roii_mba = round(float(roi_mba))
