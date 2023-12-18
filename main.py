@@ -32,9 +32,9 @@ if len(corresponding_value) > 0:
 else:
      st.warning("No corresponding value found.")
 
-mba_salary = df.loc[df['Institute'] == selected_option, 'Average Salary'].values
-if len(mba_salary) > 0:
-     st.success(f"Average Salary for {selected_option} is : Rs {mba_salary[0]}")
+salary = df.loc[df['Institute'] == selected_option, 'Average Salary'].values
+if len(salary) > 0:
+     st.success(f"Average Salary for {selected_option} is : Rs {salary[0]}")
 else:
      st.warning("No corresponding value found.")
 
@@ -49,7 +49,7 @@ annual_growth = st.number_input("Annual growth in %age",value = 15)
 # Calculations
 basl_monthly_salary = basl_salary/12
 #st.write('BASL Minimum monthly salary after 6 months is Rs.',basl_monthly_salary)
-
+mba_salary = round(float(salary))
 #n = st.slider("Years from today",0,5,1)
 a = st.slider("Months since placement",-6,30,1)
 
