@@ -41,7 +41,7 @@ else:
 #st.write(corresponding_value/12)
 
 
-basl_salary = st.number_input('The minimum salary you get placed at if you opt for BASL (in 6 months)', value=900000)
+basl_salary = 900000
 #mba_salary = st.number_input("The average salary you get placed at if you opt for traditional MBA (in 24 months)", value = 1500000)
 
 annual_growth = st.number_input("Annual growth in %age",value = 15)
