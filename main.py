@@ -34,7 +34,7 @@ else:
 
 salary = df.loc[df['Institute'] == selected_option, 'Average Salary'].values
 if len(salary) > 0:
-     st.success(f"Average Salary for {selected_option} is : Rs {salary[0]}")
+     st.success(f"Average CTC of {selected_option} is : Rs format{salary[0]},','")
 else:
      st.warning("No corresponding value found.")
 
