@@ -23,7 +23,7 @@ basl_investment = 175000
 #mba_institute = st.selectbox("Select your Institute",options=institutes)
 #mba_fee = float(st.selectbox('Your Institute\'s fee ',options=fee))
 column1_options = df['Institute'].tolist()
-selected_option = st.selectbox("How much a Tradional MBA costs? Select an Institute to find out", column1_options)
+selected_option = st.selectbox("Please select your dream college", column1_options)
 
 #corresponding value = institute's fees
 corresponding_value = df.loc[df['Institute'] == selected_option, 'Total Fees (Rs)'].values
