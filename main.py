@@ -51,7 +51,9 @@ basl_monthly_salary = basl_salary/12
 #st.write('BASL Minimum monthly salary after 6 months is Rs.',basl_monthly_salary)
 mba_salary = round(float(salary))
 #n = st.slider("Years from today",0,5,1)
-a = st.slider("Months since placement",-6,30,1)
+slider = st.slider("Months since placement",1,60,1)
+#a = st.slider("Months since placement",-6,30,1)
+a = slider + 18
 
 #if n == 0:
  #   st.write("Your approx. salary per month will be", basl_salary/12)
