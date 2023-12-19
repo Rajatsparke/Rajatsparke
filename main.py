@@ -18,7 +18,7 @@ df = conn.read()
 
 st.title('Calculate your ROI \n **Kraftshala\'s Business and Sales Launchpad (BASL) or Traditional MBA**')
 
-basl_investment = st.number_input('How much BASL costs:', value = 175000)
+basl_investment = 175000
 #mba_fee = st.number_input('Traditional MBA Fee in Rupees', value = 1000000)
 #mba_institute = st.selectbox("Select your Institute",options=institutes)
 #mba_fee = float(st.selectbox('Your Institute\'s fee ',options=fee))
