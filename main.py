@@ -94,6 +94,8 @@ elif 18<a<24:
     roi_mba = ((((mba_salary/12)*(a%18))/corresponding_value)*100)
     roii_mba = round(float(roi_mba))
     st.write(" **ROI of BASL vs ROI of MBA upto month** ",a,':',(round(((c+(d*(a%12)))/basl_investment)*100)),'% vs',roii_mba,'%')
+    comparison = roii_mba/roi_basl
+    st.write(f"BASL ROI is {comparison} times more than {selected_option}")
 elif a==24:
     d = (basl_salary*(1+annual_growth/100))/12
     st.write("You received a",annual_growth,"% increment and hence your new monthly salary is Rs.",round(basl_monthly_salary*(1+annual_growth/100)))
