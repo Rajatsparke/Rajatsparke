@@ -126,5 +126,5 @@ elif 25<=a<=30:
 
 
 
-    st.link_button("Apply Now ","https://www.kraftshala.com/business-management-course/")
+st.link_button("Apply Now ","https://www.kraftshala.com/business-management-course/")
 
