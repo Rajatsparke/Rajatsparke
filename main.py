@@ -26,18 +26,19 @@ column1_options = df['Institute'].tolist()
 selected_option = st.selectbox("Please select your dream college", column1_options)
 
 #corresponding value = institute's fees
-corresponding_value = df.loc[df['Institute'] == selected_option, 'Total Fees (Rs)'].values
-if len(corresponding_value) > 0:
-     st.success(f"Fee for {selected_option} is : Rs {corresponding_value[0]}")
+corresponding_value1 = df.loc[df['Institute'] == selected_option, 'Total Fees (Rs)'].values
+if len(corresponding_value1) > 0:
+     st.success(f"Fee for {selected_option} is : Rs {corresponding_value1[0]} Lacs")
+else:
+     st.warning("No corresponding value found.")
+corresponding_value = corresponding_value1 * 100000
+salary1 = df.loc[df['Institute'] == selected_option, 'Average Salary'].values
+if len(salary1) > 0:
+     st.success(f"Average CTC of {selected_option} is : Rs {salary1[0]} Lacs")
 else:
      st.warning("No corresponding value found.")
 
-salary = df.loc[df['Institute'] == selected_option, 'Average Salary'].values
-if len(salary) > 0:
-     st.success(f"Average CTC of {selected_option} is : Rs {salary[0]}")
-else:
-     st.warning("No corresponding value found.")
-
+salary = salary1 * 10000
 #st.write(corresponding_value/12)
 
 
