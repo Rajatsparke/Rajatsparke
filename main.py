@@ -38,7 +38,7 @@ if len(salary1) > 0:
 else:
      st.warning("No corresponding value found.")
 
-salary = salary1 * 10000
+salary = salary1 * 100000
 #st.write(corresponding_value/12)
 
 
