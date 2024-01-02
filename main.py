@@ -18,7 +18,7 @@ df = conn.read()
 
 st.title('Calculate your ROI \n **Kraftshala\'s Business and Sales Launchpad (BASL) or Traditional MBA**')
 
-st.header("This calculator calculates the Return on Investment of a good MBA college vs the Return on investment of :orange[Business Leadership Launchpad by Kraftshala]")
+#st.write("This calculator calculates the Return on Investment of a good MBA college vs the Return on investment of :orange[Business Leadership Launchpad by Kraftshala]")
 
 basl_investment = 175000
 #mba_fee = st.number_input('Traditional MBA Fee in Rupees', value = 1000000)
