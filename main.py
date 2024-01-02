@@ -41,7 +41,7 @@ else:
 salary = salary1 * 100000
 #st.write(corresponding_value/12)
 
-st.write("Source of Fee & Placement data: https://campusutra.com/mba-pgdm-placement/")
+st.caption("Source of Fee & Placement data: https://campusutra.com/mba-pgdm-placement/")
 
 
 basl_salary = 900000
