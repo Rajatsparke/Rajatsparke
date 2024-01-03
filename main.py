@@ -120,6 +120,6 @@ st.write("When you enroll yourself into the BLP program instead, here's how your
 st.write("Earnings in",month,"months (Rs)",int(total_salary_float_basl))
 st.write("ROI of the BLP Program :",int(total_salary_float_basl/basl_investment)*100,'%')
 
-st.write('Over',month, 'months, the ROI of the BLP program is',roiii_basl-roiii_mba,'% more than the ROI of',selected_option)
+st.write('Over',month, 'months, the ROI of the BLP program is',(int(total_salary_float_basl/basl_investment)*100)-(int(total_salary_float/corresponding_value)*100) ,'% more than the ROI of',selected_option)
 
 st.link_button("Know more about the BLP Program","https://www.kraftshala.com/business-management-course/")
