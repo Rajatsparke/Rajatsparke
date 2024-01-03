@@ -26,7 +26,7 @@ basl_investment = 175000
 #mba_institute = st.selectbox("Select your Institute",options=institutes)
 #mba_fee = float(st.selectbox('Your Institute\'s fee ',options=fee))
 column1_options = df['Institute'].tolist()
-selected_option = st.selectbox("Please select your dream college", column1_options)
+selected_option = st.selectbox("Please select a B-School", column1_options)
 
 #corresponding value = institute's fees
 corresponding_value1 = df.loc[df['Institute'] == selected_option, 'Total Fees (Rs)'].values
@@ -37,7 +37,7 @@ else:
 corresponding_value = corresponding_value1 * 100000
 salary1 = df.loc[df['Institute'] == selected_option, 'Average Salary'].values
 if len(salary1) > 0:
-     st.success(f"Average CTC of {selected_option} is : Rs {salary1[0]} Lacs")
+     st.success(f"Average CTC of {selected_option} student is : Rs {salary1[0]} Lacs")
 else:
      st.warning("No corresponding value found.")
 
@@ -50,7 +50,7 @@ st.caption("Source of Fee & Placement data: https://campusutra.com/mba-pgdm-plac
 basl_salary = round(float(900000/12))
 #mba_salary = st.number_input("The average salary you get placed at if you opt for traditional MBA (in 24 months)", value = 1500000)
 
-annual_growth = st.number_input("Annual growth in %age",value = 15)
+annual_growth = 15
 
 # Calculations
 basl_monthly_salary = basl_salary/12
@@ -88,8 +88,8 @@ roiii_mba = (total_salary / corresponding_value)  * 100
 #st.write(f"Total salary earned after {month} months: {total_salary:.2f}")
 #st.write(f"ROI after {month} months: {roi:.2f}%")
 
-st.write("Total earnings MBA",total_salary_float)
-st.write("ROI MBA",round(float(total_salary_float/corresponding_value)*100),"%")
+#st.write("Total earnings MBA",total_salary_float)
+#st.write("ROI MBA",round(float(total_salary_float/corresponding_value)*100),"%")
 
 
 month_basl = month + 18
@@ -114,5 +114,5 @@ roiii_basl = (total_salary_basl / basl_investment)  * 100
 #st.write(f"Total salary earned after {month} months: {total_salary:.2f}")
 #st.write(f"ROI after {month} months: {roi:.2f}%")
 
-st.write("Total earnings BASL",total_salary_float_basl)
-st.write("ROI BASL",round(float(total_salary_float_basl/basl_investment)*100),"%")
+#st.write("Total earnings BASL",total_salary_float_basl)
+#st.write("ROI BASL",round(float(total_salary_float_basl/basl_investment)*100),"%")
