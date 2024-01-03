@@ -116,3 +116,4 @@ roiii_basl = (total_salary_basl / basl_investment)  * 100
 
 #st.write("Total earnings BASL",total_salary_float_basl)
 #st.write("ROI BASL",round(float(total_salary_float_basl/basl_investment)*100),"%")
+st.write("When you enroll yourself into the BLP program instead, here's how your earnings & ROI (over the same duration) would look like:")
