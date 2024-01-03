@@ -89,7 +89,7 @@ roiii_mba = int(total_salary / corresponding_value)  * 100
 #st.write(f"ROI after {month} months: {roi:.2f}%")
 
 st.write("Earnings in",month,"months :",int(total_salary_float))
-st.write("ROI of studying at",selected_option,":",(float(total_salary_float/corresponding_value)*100),"%")
+st.write("ROI of studying at",selected_option,":",(round(roiii_mba),"%")
 
 
 month_basl = month + 18
@@ -121,3 +121,5 @@ st.write("Earnings in",month,"months",int(total_salary_float_basl))
 st.write("ROI of the BLP Program :",int(total_salary_float_basl/basl_investment)*100)
 
 st.write('Over',month, 'months, the ROI of the BLP program is',roiii_basl-roiii_mba,'% more than the ROI of',selected_option)
+
+st.link_button("Know more about the BLP Program","https://www.kraftshala.com/business-management-course/")
