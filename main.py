@@ -87,8 +87,8 @@ roiii_mba = (total_salary / corresponding_value)  * 100
 #st.write(f"Total salary earned after {month} months: {total_salary:.2f}")
 #st.write(f"ROI after {month} months: {roi:.2f}%")
 
-st.write("Total earnings",total_salary_float)
-st.write("ROI",round(float(total_salary_float/corresponding_value)*100),"%")
+st.write("Total earnings MBA",total_salary_float)
+st.write("ROI MBA",round(float(total_salary_float/corresponding_value)*100),"%")
 
 
 month_basl = month + 18
@@ -113,5 +113,5 @@ roiii_basl = (total_salary_basl / basl_investment)  * 100
 #st.write(f"Total salary earned after {month} months: {total_salary:.2f}")
 #st.write(f"ROI after {month} months: {roi:.2f}%")
 
-st.write("Total earnings",total_salary_float_basl)
-st.write("ROI",round(float(total_salary_float_basl/basl_investment)*100),"%")
+st.write("Total earnings BASL",total_salary_float_basl)
+st.write("ROI BASL",round(float(total_salary_float_basl/basl_investment)*100),"%")
