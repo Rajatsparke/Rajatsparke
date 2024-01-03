@@ -5,7 +5,7 @@ import pandas as pd
 import gspread
 from streamlit_gsheets import GSheetsConnection
 
-st.set_page_config(page_title='Calculate your ROI ',page_icon="bar_chart")
+st.set_page_config(page_title='ROI Calculator',page_icon="bar_chart")
 # Create a connection object.
 conn = st.connection("gsheets", type=GSheetsConnection)
 
