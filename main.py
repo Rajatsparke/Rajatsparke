@@ -123,3 +123,4 @@ st.write("ROI of the BLP Program:",int(total_salary_float_basl/basl_investment)*
 st.write('Over',month,'months, the ROI of the BLP program is',(roiii_basl - roiii_mba) ,'% more than the ROI of',selected_option)
 
 st.link_button("Know more about the BLP Program","https://www.kraftshala.com/business-management-course/")
+st.help("Hello")
