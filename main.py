@@ -56,9 +56,9 @@ basl_monthly_salary = basl_salary/12
 #st.write('BASL Minimum monthly salary after 6 months is Rs.',basl_monthly_salary)
 mba_salary = round(float(salary))
 #n = st.slider("Years from today",0,5,1)
-slider = st.slider(f"Months since placement from {selected_option}",1,60,1)
+month = st.slider(f"Months since placement from {selected_option}",1,60,1)
 #a = st.slider("Months since placement",-6,30,1)
-a = slider + 18
+'''a = slider + 18
 
 #if n == 0:
  #   st.write("Your approx. salary per month will be", basl_salary/12)
@@ -104,7 +104,7 @@ elif 18<a<24:
 elif a==24:
     d = (basl_salary*(1+annual_growth/100))/12
     st.write("You received a",annual_growth,"% increment and hence your new monthly salary is Rs.",round(basl_monthly_salary*(1+annual_growth/100)))
-    st.write("Your total earnings after",a ,'months via BASL is',round((c+(d*(12)))))
+    st.write("Your total earnings after",slider ,'months via BASL is',round((c+(d*(12)))))
     
     roi_basl = (round(((c+(d*(12)))/basl_investment)*100))
     st.write("You got placed via MBA and your monthly salary is",round(mba_salary/12))
@@ -128,7 +128,33 @@ elif 25<=a<=30:
 
 
 
-st.link_button("Apply Now ","https://www.kraftshala.com/business-management-course/")
+st.link_button("Apply Now ","https://www.kraftshala.com/business-management-course/")'''
+
+# Validate month input
+if not 1 <= month <= 60:
+  print("Invalid month. Please enter a value between 1 and 60.")
+  exit()
+
+# Initialize variables
+total_salary = 0
+current_salary = salary
+previous_year_salary = current_salary
+
+# Calculate salary and apply growth based on month
+for i in range(1, month + 1):
+  total_salary += current_salary
+
+  # Apply annual growth every 12 months starting from month 13
+  if i % 12 == 0 and i >= 12:
+    previous_year_salary *= (1 + annual_growth / 100)
+    current_salary = previous_year_salary
+
+# Calculate ROI
+roi = (total_salary / corresponding_value)  * 100
+
+# Print results
+print(f"Total salary earned after {month} months: ${total_salary:.2f}")
+print(f"ROI after {month} months: {roi:.2f}%")
 
 
 
