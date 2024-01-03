@@ -40,7 +40,7 @@ if len(salary1) > 0:
 else:
      st.warning("No corresponding value found.")
 
-salary = salary1 * 100000
+salary = (salary1 * 100000)/12
 #st.write(corresponding_value/12)
 
 st.caption("Source of Fee & Placement data: https://campusutra.com/mba-pgdm-placement/")
@@ -79,6 +79,7 @@ for i in range(1, month + 1):
     previous_year_salary *= (1 + annual_growth / 100)
     current_salary = previous_year_salary
 
+total_salary_float = float(total_salary)
 # Calculate ROI
 roi = (total_salary / corresponding_value)  * 100
 
@@ -86,8 +87,8 @@ roi = (total_salary / corresponding_value)  * 100
 #st.write(f"Total salary earned after {month} months: {total_salary:.2f}")
 #st.write(f"ROI after {month} months: {roi:.2f}%")
 
-st.write("Total earnings",total_salary)
-st.write("ROI",(total_salary/corresponding_value)*100)
+st.write("Total earnings",total_salary_float)
+st.write("ROI",(total_salary_float/corresponding_value)*100)
 
 
 
