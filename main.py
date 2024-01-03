@@ -123,3 +123,15 @@ st.write("ROI of the BLP Program:",int(total_salary_float_basl/basl_investment)*
 st.write('Over',month,'months, the ROI of the BLP program is',(roiii_basl - roiii_mba) ,'% more than the ROI of',selected_option)
 
 st.link_button("Know more about the BLP Program","https://www.kraftshala.com/business-management-course/")
+
+info_text = """
+This is the information you want to display when the cursor is placed over the info button.
+
+You can customize this text with any information you want to share.
+"""
+
+
+
+# Info button
+if st.button("ℹ️ Info"):
+    st.markdown(info_text)
