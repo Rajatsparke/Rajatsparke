@@ -116,7 +116,7 @@ roiii_basl = int(total_salary_float_basl/basl_investment)*100
 
 #st.write("Total earnings BASL",total_salary_float_basl)
 #st.write("ROI BASL",round(float(total_salary_float_basl/basl_investment)*100),"%")
-st.markdown("**When you enroll yourself into the BLP program instead, here's how your earnings & ROI (over the same duration) would look like:**")
+st.markdown("***When you enroll yourself into the BLP program instead, here's how your earnings & ROI (over the same duration) would look like:***")
 st.write("Earnings in",month_basl,"months (in INR) post :orange[BLP Program's Placement]:",int(total_salary_float_basl))
 st.write("ROI of the BLP Program:",int(total_salary_float_basl/basl_investment)*100,'%')
 #(int(total_salary_float_basl/basl_investment)*100)-(int(total_salary_float/corresponding_value)*100)
