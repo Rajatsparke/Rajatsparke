@@ -82,7 +82,7 @@ for i in range(1, month + 1):
 
 total_salary_float = float(total_salary)
 # Calculate ROI
-roiii_mba = int(total_salary / corresponding_value)  * 100
+roiii_mba = round(float(total_salary_float/corresponding_value)*100)
 
 # Print results
 #st.write(f"Total salary earned after {month} months: {total_salary:.2f}")
@@ -108,7 +108,7 @@ for i in range(1, month_basl + 1):
 
 total_salary_float_basl = float(total_salary_basl)
 # Calculate ROI
-roiii_basl = int(total_salary_basl / basl_investment)  * 100
+roiii_basl = int(total_salary_float_basl/basl_investment)*100
 
 # Print results
 #st.write(f"Total salary earned after {month} months: {total_salary:.2f}")
@@ -119,7 +119,7 @@ roiii_basl = int(total_salary_basl / basl_investment)  * 100
 st.write("When you enroll yourself into the BLP program instead, here's how your earnings & ROI (over the same duration) would look like:")
 st.write("Earnings in",month,"months (Rs)",int(total_salary_float_basl))
 st.write("ROI of the BLP Program :",int(total_salary_float_basl/basl_investment)*100,'%')
-
-st.write('Over',month, 'months, the ROI of the BLP program is',(int(total_salary_float_basl/basl_investment)*100)-(int(total_salary_float/corresponding_value)*100) ,'% more than the ROI of',selected_option)
+#(int(total_salary_float_basl/basl_investment)*100)-(int(total_salary_float/corresponding_value)*100)
+st.write('Over',month, 'months, the ROI of the BLP program is',(roiii_basl - roiii_mba) ,'% more than the ROI of',selected_option)
 
 st.link_button("Know more about the BLP Program","https://www.kraftshala.com/business-management-course/")
