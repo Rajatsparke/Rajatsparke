@@ -83,7 +83,7 @@ for i in range(1, month + 1):
 roi = (total_salary / corresponding_value)  * 100
 
 # Print results
-print(f"Total salary earned after {month} months: ${total_salary:.2f}")
+print(f"Total salary earned after {month} months: {total_salary:.2f}")
 print(f"ROI after {month} months: {roi:.2f}%")
 
 
