@@ -89,7 +89,7 @@ roiii_mba = int(total_salary / corresponding_value)  * 100
 #st.write(f"ROI after {month} months: {roi:.2f}%")
 
 st.write("Earnings in",month,"months :",int(total_salary_float))
-st.write("ROI of studying at",selected_option,":",(round(roiii_mba),"%")
+st.write("ROI of studying at",selected_option,":",(float(total_salary_float/corresponding_value)*100),"%")
 
 
 month_basl = month + 18
