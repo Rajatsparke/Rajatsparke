@@ -88,7 +88,7 @@ roi = (total_salary / corresponding_value)  * 100
 #st.write(f"ROI after {month} months: {roi:.2f}%")
 
 st.write("Total earnings",total_salary_float)
-st.write("ROI",float(total_salary_float/corresponding_value)*100)
+st.write("ROI",round(float(total_salary_float/corresponding_value)*100),"%")
 
 
 
