@@ -46,7 +46,7 @@ salary = (salary1 * 100000)/12
 st.caption("Source of Fee & Placement data: https://campusutra.com/mba-pgdm-placement/")
 
 
-basl_salary = 900000
+basl_salary = round(float(900000/12))
 #mba_salary = st.number_input("The average salary you get placed at if you opt for traditional MBA (in 24 months)", value = 1500000)
 
 annual_growth = st.number_input("Annual growth in %age",value = 15)
@@ -91,4 +91,27 @@ st.write("Total earnings",total_salary_float)
 st.write("ROI",round(float(total_salary_float/corresponding_value)*100),"%")
 
 
+month_basl = month + 18
+total_salary_basl = 0
+current_salary_basl = basl_salary
+previous_year_salary_basl = current_salary_basl
 
+# Calculate salary and apply growth based on month
+for i in range(1, month_basl + 1):
+  total_salary_basl += current_salary_basl
+
+  # Apply annual growth every 12 months starting from month 13
+  if i % 12 == 0 and i >= 12:
+    previous_year_salary_basl *= (1 + annual_growth / 100)
+    current_salary_basl = previous_year_salary_basl
+
+total_salary_float_basl = float(total_salary_basl)
+# Calculate ROI
+roi = (total_salary_basl / basl_investment)  * 100
+
+# Print results
+#st.write(f"Total salary earned after {month} months: {total_salary:.2f}")
+#st.write(f"ROI after {month} months: {roi:.2f}%")
+
+st.write("Total earnings",total_salary_float_basl)
+st.write("ROI",round(float(total_salary_float_basl/corresponding_value)*100),"%")
