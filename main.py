@@ -17,6 +17,7 @@ df = conn.read()
 #st.title('Calculate your ROI \n **Kraftshala\'s Business and Sales Launchpad (BASL) or Traditional MBA**')
 
 st.title('Choosing a Business/Program that delivers the best ROI for you')
+st.subheader('Business-education should be about making better decisions. Let us help you make a decision in 2024 that could impact the long term returns on your investment in a business program.')
 
 #st.write("This calculator calculates the Return on Investment of a good MBA college vs the Return on investment of :orange[Business Leadership Launchpad by Kraftshala]")
 
