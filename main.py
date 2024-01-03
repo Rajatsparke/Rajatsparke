@@ -31,13 +31,13 @@ selected_option = st.selectbox("Please select a B-School", column1_options)
 #corresponding value = institute's fees
 corresponding_value1 = df.loc[df['Institute'] == selected_option, 'Total Fees (Rs)'].values
 if len(corresponding_value1) > 0:
-     st.success(f"Fee for {selected_option} is : Rs {corresponding_value1[0]} Lacs")
+     st.success(f"Fee for {selected_option} is: Rs {corresponding_value1[0]} Lacs")
 else:
      st.warning("No corresponding value found.")
 corresponding_value = corresponding_value1 * 100000
 salary1 = df.loc[df['Institute'] == selected_option, 'Average Salary'].values
 if len(salary1) > 0:
-     st.success(f"Average CTC of {selected_option} student is : Rs {salary1[0]} Lacs")
+     st.success(f"Average CTC of {selected_option} student is: Rs {salary1[0]} Lacs")
 else:
      st.warning("No corresponding value found.")
 
@@ -88,7 +88,7 @@ roiii_mba = round(float(total_salary_float/corresponding_value)*100)
 #st.write(f"Total salary earned after {month} months: {total_salary:.2f}")
 #st.write(f"ROI after {month} months: {roi:.2f}%")
 
-st.write("Earnings in",month,"months (Rs) : ",int(total_salary_float))
+st.write("Your earnings in",month,"month(s) (in INR) post 24 months training-period: ",int(total_salary_float))
 st.write("ROI of studying at",selected_option,":",(round(float(total_salary_float/corresponding_value)*100)),"%")
 
 
@@ -116,10 +116,10 @@ roiii_basl = int(total_salary_float_basl/basl_investment)*100
 
 #st.write("Total earnings BASL",total_salary_float_basl)
 #st.write("ROI BASL",round(float(total_salary_float_basl/basl_investment)*100),"%")
-st.write("When you enroll yourself into the BLP program instead, here's how your earnings & ROI (over the same duration) would look like:")
-st.write("Earnings in",month,"months (Rs)",int(total_salary_float_basl))
-st.write("ROI of the BLP Program :",int(total_salary_float_basl/basl_investment)*100,'%')
+st.markdown("**When you enroll yourself into the BLP program instead, here's how your earnings & ROI (over the same duration) would look like:**")
+st.write("Earnings in",month_basl,"months (in INR) post :orange[BLP Program's Placement]:",int(total_salary_float_basl))
+st.write("ROI of the BLP Program:",int(total_salary_float_basl/basl_investment)*100,'%')
 #(int(total_salary_float_basl/basl_investment)*100)-(int(total_salary_float/corresponding_value)*100)
-st.write('Over',month, 'months, the ROI of the BLP program is',(roiii_basl - roiii_mba) ,'% more than the ROI of',selected_option)
+st.write('Over',month,'months, the ROI of the BLP program is',(roiii_basl - roiii_mba) ,'% more than the ROI of',selected_option)
 
 st.link_button("Know more about the BLP Program","https://www.kraftshala.com/business-management-course/")
